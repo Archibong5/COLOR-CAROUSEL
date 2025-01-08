@@ -1,0 +1,74 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+
+body{
+  /* border: 3px solid red; */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+
+.items{
+  height: 800px;
+  width: 100%;
+  white-space: nowrap;
+  will-change: transform;
+  overflow-x: scroll;
+  perspective: 500px;
+  transform: scale(0.98);
+  font-size: 0;
+  transition: all 0.2s;
+  position: relative;
+  background: black;
+}
+
+
+.item{
+  height: 100%;
+  display: inline-flex;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  color: white;
+  text-shadow: 2px 2px 4px darkslateblue;
+}
+
+.items.active{
+  transform: scale(1);
+  background: rgba(255,255,255,0.8);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+
+.item:nth-child(9n+1){ background: magenta}
+.item:nth-child(9n+2){ background: darkslateblue;}
+.item:nth-child(9n+3){ background: rebeccapurple;}
+.item:nth-child(9n+4){ background: goldenrod;}
+.item:nth-child(9n+5){ background: tomato;}
+.item:nth-child(9n+6){ background: gold}
+.item:nth-child(9n+7){ background: cadetblue;}
+.item:nth-child(9n+8){ background: forestgreen;}
+.item:nth-child(9n+9){ background: orange;}
+
+
+.item:nth-child(even){
+  /* transform: rotateY(40deg) scaleX(1.31); */
+
+}
+
+
+
+.item:nth-child(odd){
+  /* transform: rotateY(-40deg) scaleX(1.31); */
+}
